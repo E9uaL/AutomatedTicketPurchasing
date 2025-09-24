@@ -9,13 +9,13 @@ A Python script designed for educational purposes to learn web scraping and brow
 
 > **This script is strictly for educational purposes to learn Python programming, web scraping, and browser automation techniques.**
 > 
-> **It should NOT be used for commercial purposes or to automatically purchase real tickets on 12306.cn.** This likely violates the 12306.cn Terms of Service and can result in account penalties or other consequences. Use responsibly and at your own risk.
+> **It should NOT be used for commercial purposes or to automatically purchase real tickets on train.cn.** This likely violates the train.cn Terms of Service and can result in account penalties or other consequences. Use responsibly and at your own risk.
 > 
 > The script automates the process up to the payment page. The user must manually complete the payment step in the browser.
 
 ## Description
 
-This script demonstrates how to interact with the 12306.cn website using Python's `requests` and `selenium` libraries. It automates:
+This script demonstrates how to interact with the train.cn website using Python's `requests` and `selenium` libraries. It automates:
 
 - Manual login process (user logs in via controlled browser)
 - Station code retrieval and validation
@@ -37,8 +37,7 @@ Before running the script, ensure you have:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/12306-ticket-booking.git
-cd 12306-ticket-booking
+git clone https://github.com/E9uaL/AutomatedTicketPurchasing.git
 ```
 
 ### 2. Install dependencies
@@ -56,9 +55,8 @@ pip install requests pandas selenium openpyxl
 ### 3. Configure ChromeDriver
 
 - If ChromeDriver is **not** in your system PATH:
-  1. Open `12306_script_final.py` in your text editor
-  2. Locate the `login_to_12306_selenium` function
-  3. Uncomment and modify the service path:
+  1. Open `BuyTicketest1.py` in your text editor
+  2. Uncomment and modify the service path:
   
   ```python
   # For Linux/Mac:
@@ -70,20 +68,20 @@ pip install requests pandas selenium openpyxl
   driver = webdriver.Chrome(service=service)
   ```
   
-  4. Comment out `driver = webdriver.Chrome()`
+  3. Comment out `driver = webdriver.Chrome()`
 
 ## Usage
 
 1. **Run the script**:
    ```bash
-   python 12306_script_final.py
+   python BuyTicketest1.py
    ```
 
 2. **Follow the prompts**:
    - Enter travel date (YYYY-MM-DD)
    - Enter departure and arrival stations (full Chinese names, e.g., "北京", "上海")
-   - A browser window will open to 12306 login page
-   - **Manually log in** to your 12306 account
+   - A browser window will open to train login page
+   - **Manually log in** to your train account
    - Press `Enter` in terminal after successful login
    - The script will fill search details and click search button
    - **In browser**: Select desired train and click "预订" (Book)
@@ -91,13 +89,13 @@ pip install requests pandas selenium openpyxl
    - Press `Enter` in terminal after reaching payment page
 
 3. **Complete payment**:
-   - Manually complete payment on 12306 website
+   - Manually complete payment on train website
 
 ## Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
-| **Element Not Found** | 12306 website HTML structure may have changed. Use browser dev tools (F12) to find correct selectors and update `search_tickets_selenium` function |
+| **Element Not Found** | train website HTML structure may have changed. Use browser dev tools (F12) to find correct selectors and update `search_tickets_selenium` function |
 | **ChromeDriver Error** | Verify ChromeDriver is in PATH or correctly configured in script |
 | **API Errors** | This script avoids direct API calls. If errors occur, they're likely due to timing issues - increase wait times in script |
 | **Station Name Issues** | Ensure you're using full Chinese station names (e.g., "北京" not "BJ") |
@@ -105,20 +103,20 @@ pip install requests pandas selenium openpyxl
 ## Notes
 
 - The script includes delays (`time.sleep`) as basic anti-crawler measures
-- Designed specifically for the Chinese 12306 website
-- Ensure your 12306 account is verified with sufficient balance before booking
-- The script cannot bypass 12306's captcha or security measures
+- Designed specifically for the Chinese train website
+- Ensure your train account is verified with sufficient balance before booking
+- The script cannot bypass train's captcha or security measures
 
 ## FAQ
 
 **Q: Why does the script stop at the payment page?**  
-A: The script is designed for educational purposes only. Completing payment automatically would violate 12306's terms of service.
+A: The script is designed for educational purposes only. Completing payment automatically would violate train's terms of service.
 
 **Q: Why do I get "网络可能存在问题" errors when using direct API calls?**  
-A: 12306 has robust security measures that prevent direct API access without proper session management and token validation.
+A: train has robust security measures that prevent direct API access without proper session management and token validation.
 
 **Q: Can this script handle captchas automatically?**  
-A: No, and attempting to do so would violate 12306's terms of service. The script relies on manual login to maintain a valid session.
+A: No, and attempting to do so would violate train's terms of service. The script relies on manual login to maintain a valid session.
 
 ## Contributing
 
@@ -134,4 +132,4 @@ Contributions are welcome! Please follow these steps:
 
 This project is for educational use only. It is not intended for production use or commercial applications.
 
-> **Note**: Using this script to automate ticket purchasing on 12306.cn may violate their terms of service and could result in account suspension.
+> **Note**: Using this script to automate ticket purchasing on train.cn may violate their terms of service and could result in account suspension.
