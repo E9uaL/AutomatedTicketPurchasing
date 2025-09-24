@@ -41,7 +41,7 @@ Before running the script, ensure you have the following installed:
     *   Run the following command to install the required Python libraries:
 
       ```bash
-      pip install requests pandas openpyxl selenium
+      pip install requests pandas selenium
       ```
 
 3.  **Configure ChromeDriver** (if not in PATH):
