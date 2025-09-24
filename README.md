@@ -132,4 +132,4 @@ Contributions are welcome! Please follow these steps:
 
 This project is for educational use only. It is not intended for production use or commercial applications.
 
-> **Note**: Using this script to automate ticket purchasing on train.cn may violate their terms of service and could result in account suspension.
+> **Note**: Using this script to automate ticket purchasing on 12306.cn may violate their terms of service and could result in account suspension.
