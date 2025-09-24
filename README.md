@@ -72,7 +72,7 @@ pip install requests pandas selenium openpyxl
   
   4. Comment out `driver = webdriver.Chrome()`
 
-## ▶️ Usage
+## Usage
 
 1. **Run the script**:
    ```bash
